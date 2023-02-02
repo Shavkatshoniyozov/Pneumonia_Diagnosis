@@ -7,9 +7,9 @@ plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 #title
-st.title("Pneumonia diagnosis model")
-st.header('The model identifies if the patient has pneumonia or not')
-st.write("Please kindly upload only chest X-ray image to get diagnosis result")
+st.title("Pneumonia Disease Detection Model")
+st.header('The model identifies whether the patient has pneumonia or not')
+st.write("Please kindly upload only chest X-ray image to get diagnostic test result")
 
 #Upload picture
 file = st.file_uploader("", type=['png', 'jpeg', 'gif', 'svg', 'jpg'])
