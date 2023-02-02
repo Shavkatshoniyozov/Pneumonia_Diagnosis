@@ -12,7 +12,7 @@ st.header('The model identifies if the patient has pneumonia or not')
 st.write("Please kindly upload only chest X-ray image to get diagnosis result")
 
 #Upload picture
-file = st.file_uploader("Upload picture", type=['png', 'jpeg', 'gif', 'svg', 'jpg'])
+file = st.file_uploader(type=['png', 'jpeg', 'gif', 'svg', 'jpg'])
 
 if file:
     #PIL convert image
@@ -51,5 +51,7 @@ if file:
         st.plotly_chart(fig)
     else:
         st.warning('Please upload only chest X-ray image', icon="⚠️")
+        st.write("The image you have uploaded is:")
+        st.image(new_image)
 
 
