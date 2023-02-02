@@ -1,0 +1,4 @@
+fastai
+pasdas
+plotly
+numpy<1.24
