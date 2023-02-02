@@ -47,7 +47,7 @@ if file:
         st.plotly_chart(fig)
     else:
         st.warning('Please upload only chest X-ray image', icon="⚠️")
-        st.write("The image you have uploaded is different from what model requires to work")
+        st.error("The image you have uploaded is different from what model requires", icon="🚨")
         #st.image(new_image)
 
 
