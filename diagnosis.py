@@ -17,7 +17,9 @@ file = st.file_uploader("", type=['png', 'jpeg', 'gif', 'svg', 'jpg'])
 if file:
     #PIL convert image
     img =PILImage.create(file)
-
+    image = Image.open(file)
+    new_image = image.resize((600, 500))
+    
     #Model
     model = load_learner('filter.pkl')
 
@@ -27,15 +29,9 @@ if file:
 
     
     if filter > 65:
-        
-        image = Image.open(file)
-        new_image = image.resize((600, 500))
+       
         st.image(new_image)
-        #new = PILImage.create(img)
-
-        #PIL convert image
-        #img =PILImage.create(file)
-
+        
         #Model
         main_model = load_learner('pneumonia_diagnosis.pkl')
 
